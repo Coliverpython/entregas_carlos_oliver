@@ -1,0 +1,75 @@
+﻿SQL
+
+
+EJERCICIO 1 Muestra los clientes de brasil*
+SELECT * 
+FROM `neat-veld-421114.chinook_bigquery.Customer` 
+WHERE Country LIKE "Brazil"
+EJERCICIO 2 Muestrame los empleados que son agentes de ventas*
+SELECT *
+FROM `neat-veld-421114.chinook_bigquery.Employee` 
+WHERE Title LIKE "Sales%"
+EJERCICIO 3 Muestrame las canciones de ‘AC/DC’
+SELECT * 
+FROM `neat-veld-421114.chinook_bigquery.Track` 
+WHERE Composer = 'AC/DC'
+EJERCICIO 4. Muestra los clientes que no sean de USA: Nombre completo, ID, Pais*
+SELECT CustomerId, FirstName, LastName, Country
+FROM `neat-veld-421114.chinook_bigquery.Customer`
+WHERE Country <> 'USA'
+EJERCICIO 5 Muestrame los empleados que son agentes de ventas: Nombre completo, Dirección , Ciudad, Estado, Pais) y email
+SELECT FirstName, LastName, Address , City, State, Country, Email
+FROM `neat-veld-421114.chinook_bigquery.Employee`
+WHERE Title LIKE 'Sales%'
+ EJERCICIO 6 Muestra una lista con los paises que aparecen a los que se ha facturado, la lista no debe contener paises repetidos*
+SELECT DISTINCT(BillingCountry)
+FROM `neat-veld-421114.chinook_bigquery.Invoice`
+
+
+EJERCICIO 7 Muestra una lista con los estados de USA de donde son los clientes, la lista no debe contener estados repetidos
+
+
+SELECT DISTINCT(State)
+FROM `neat-veld-421114.chinook_bigquery.Customer`
+WHERE Country = 'USA'
+ 
+8. Cuantos articulos tiene la factura 37*
+SELECT Quantity
+FROM `neat-veld-421114.chinook_bigquery.InvoiceLine`
+WHERE InvoiceLineId = 37
+
+
+ 
+9. Cuantas canciones tiene ‘AC/DC’
+ 
+SELECT Name, Composer
+FROM `neat-veld-421114.chinook_bigquery.Track`
+WHERE Composer = 'AC/DC'
+10. Cuantos articulos tiene cada factura*
+ 
+SELECT Quantity, InvoiceLineId
+FROM `neat-veld-421114.chinook_bigquery.InvoiceLine`
+
+
+ 
+11. Muestrame cuantos facturas hay de cada pais
+ 
+
+
+ 
+Cuantas facturas ha habido en 2009 y 2011*
+ 
+13.
+ 
+Cuantas facturas ha habido entre 2009 y 2011*
+ 
+14.
+ 
+Cuantos clientes hay de españa y de Brazil
+ 
+15.
+ 
+Muestrame las canciones que su titulo empieza por ‘You’
+ 
+ 
+SEGUNDA PARTE
