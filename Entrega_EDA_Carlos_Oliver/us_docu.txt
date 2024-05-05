@@ -1,0 +1,125 @@
+Fuente de datos transaccionales, cada transacción contiene:
+System Identity Id		=>	Internal identifier
+Estimate Arrival Date		=>	Estimated arrival date of shipment
+Actual Arrival Date		=>	Actual arrival date of shipment
+Bill of Lading			=>	Unique identifier for each shipment (issued by the freight forwarder)
+Master Bill of Lading		=>	Identifier of many shpments that are consolidated by the carrier into a larger shipment(issued by a carrier to a forwarding agent or the shipper)
+Bill Type Code			=>	Two possible values: If H it has Master Bill of Lading, if R it has no Bill of Lading.
+Carrier SASC Code			=>	Unique two-to-four-letter code used to identify transportation companies
+Vessel Country Code		=>	Boat country code
+Vessel Code				=>	Boat identifier
+Vessel Name				=>	Name of boat model
+Voyage				=>	Trip identifier
+Inbond Type				=>	Type of Inbond: Type 61 - Immediate Transportation, Type 62 - Transportation & Exportation,Type 63 - Immediate Exportation 
+Manifest No				=>	Number of Manifests/items in a bill of lading
+Mode of Transportation		=>	Mode of Transportation Code: 10 - Non-containerized, 11 - Containerized
+Loading Port			=>	Port where the shipment was loaded
+Last Vist Foreign Port		=>	Last port the ship has passed through 
+US Clearing District		=>	U.S. District where the customs offices (where the shipment is registered) are located
+Unloading Port			=>	Port where the shipment is unloaded
+Place of Receipt			=>	Place where the shipment passes from the shipper to the forwarding company
+Country				=>	Country of origin of the shipping company | Inferred from the other fields
+Country Sure Level		=>	Safety level of country prediction. The higher the value, the more certain the inference. Possible values: 1, 5, 6, 7, 8, 9
+Weight in KG			=>	Shipping weight in KG
+Weight				=>	Shipping weight
+Weight Unit				=>	Weight Unit
+TEU					=>	Unit of measurement of freight containers
+Quantity				=>	Number of items in the shipment
+Quantity Unit			=>	Unit of the items
+Measure in CM			=>	Shipping measures in centimeters
+Measure				=>	Shipping measures
+Measure Unit			=>	Unit of measure
+Container Id			=>	Container identifier
+Container Size			=>	Container dimensions
+Container Type			=>	ISO container codes
+Container Desc Code		=>	Standardized container description code codes
+Container Load Status		=>	Standardized container load status codes
+Container Type of Service	=>	Standardized container type of service codes
+Shipper Name			=>	Name of the company sending the shipment
+Shipper Address			=>	Address of the company sending the shipment
+Raw Shipper Name			=>	Raw address of the company sending the shipment
+Raw Shipper Addr1			=>	Raw address of the company sending the shipment 1
+Raw Shipper Addr2			=>	Raw address of the company sending the shipment 2
+Raw Shipper Addr3			=>	Raw address of the company sending the shipment 3
+Raw Shipper Addr4			=>	Raw address of the company sending the shipment 4
+Raw Shipper Addr Others		=>	Raw address of the company sending the shipment Others
+Consignee Name			=> 	Name of the company receiving the shipment
+Consignee Address			=>	Address of the company receiving the shipment
+Raw Consignee Name		=>	Raw address of the company receiving the shipment
+Raw Consignee Addr1		=>	Raw address of the company receiving the shipment 1
+Raw Consignee Addr2		=>	Raw address of the company receiving the shipment 2
+Raw Consignee Addr3		=>	Raw address of the company receiving the shipment 3
+Raw Consignee Addr4		=>	Raw address of the company receiving the shipment 4
+Raw Consignee Addr Others	=>	Raw address of the company receiving the shipment Others
+Notify Party Name			=>	Company to be notified. It is usually consegnee or freight forwarder
+Notify Party Address		=>	Address of the company that must be be notified
+Raw Notify Party Name		=>	Raw address of the company that must be be notified 
+Raw Notify Party Addr1		=>	Raw address of the company that must be be notified 1
+Raw Notify Party Addr2		=>	Raw address of the company that must be be notified 2
+Raw Notify Party Addr3		=>	Raw address of the company that must be be notified 3
+Raw Notify Party Addr4		=>	Raw address of the company that must be be notified 4
+Raw Notify Party Addr Others	=>	Raw address of the company that must be be notified Others
+Product Desc			=>	Description of the product being shipped
+Marks & Numbers			=>	Some information identifying the shipment so that the consignee can know what the shipment is.
+HS Code				=>	Number used by customs to classify a product (Harmonized Commodity Description and Coding System) | Inferred from the Product Description field
+HS Code Sure Level		=>	Safety level of HS Code prediction. The higher the value, the more certain the inference. Possible values: 1, 5 , 8
+CIF					=>	Incoterm (Cost, insurance and Freight). International trade term used in sales and purchase transactions where the goods are transported by ship.
+Indicator of true supplier	=>	Indicates whether the shipper fields (shipper name, shipper address, etc) refer to the supplier company or to a forwarding company. Possible cases: Y (Yes) , N (No)
+Indicator of true buyer		=>	Indicates whether the consegnee fields (shipper name, shipper address, etc) refer to the supplier company or to a forwarding company. Possible values: Y (Yes) , N (No)
+END					=>	End-of-shipment/row/transaction indicator
+
+
+System Identity Id: Identificador interno del sistema.
+Estimate Arrival Date: Fecha estimada de llegada del envío.
+Actual Arrival Date: Fecha real de llegada del envío.
+Bill of Lading: Identificador único de cada envío, emitido por el transitario.
+Master Bill of Lading: Identificador para varios envíos consolidados por el transportista en un envío más grande, emitido por un transportista a un agente de carga o al expedidor.
+Bill Type Code: Código que indica el tipo de conocimiento de embarque; 'H' si tiene Master Bill of Lading, 'R' si no tiene Bill of Lading.
+Carrier SASC Code: Código único de dos a cuatro letras utilizado para identificar compañías de transporte.
+Vessel Country Code: Código del país del barco.
+Vessel Code: Identificador del barco.
+Vessel Name: Nombre del modelo del barco.
+Voyage: Identificador del viaje.
+Inbond Type: Tipo de régimen de tránsito aduanero: Tipo 61 - Transporte inmediato, Tipo 62 - Transporte y exportación, Tipo 63 - Exportación inmediata.
+Manifest No: Número de manifiestos/artículos en un conocimiento de embarque.
+Mode of Transportation: Código del modo de transporte: 10 - No contenedorizado, 11 - Contenedorizado.
+Loading Port: Puerto de carga donde se cargó el envío.
+Last Vist Foreign Port: Último puerto extranjero que ha pasado el barco.
+US Clearing District: Distrito en EE. UU. donde se encuentran las oficinas de aduanas (donde se registra el envío).
+Unloading Port: Puerto donde se descarga el envío.
+Place of Receipt: Lugar donde el envío pasa del expedidor a la compañía de flete.
+Country: País de origen de la compañía de envío.
+Country Sure Level: Nivel de seguridad de la predicción del país. Cuanto mayor es el valor, más segura es la inferencia.
+Weight in KG: Peso del envío en kilogramos.
+Weight: Peso del envío.
+Weight Unit: Unidad de peso.
+TEU: Unidad de medida de los contenedores de carga.
+Quantity: Número de artículos en el envío.
+Quantity Unit: Unidad de los artículos.
+Measure in CM: Medidas del envío en centímetros.
+Measure: Medidas del envío.
+Measure Unit: Unidad de medida.
+Container Id: Identificador del contenedor.
+Container Size: Dimensiones del contenedor.
+Container Type: Códigos ISO de tipos de contenedores.
+Container Desc Code: Código de descripción estándar del contenedor.
+Container Load Status: Códigos de estado de carga del contenedor.
+Container Type of Service: Códigos de tipo de servicio del contenedor.
+Shipper Name: Nombre de la compañía que envía el envío.
+Shipper Address: Dirección de la compañía que envía el envío.
+Raw Shipper Name: Nombre sin procesar de la compañía que envía el envío.
+Raw Shipper Addr1 - Addr4 & Addr Others: Direcciones sin procesar de la compañía que envía el envío, distribuidas en varios campos para detalles adicionales.
+Consignee Name: Nombre de la compañía que recibe el envío.
+Consignee Address: Dirección de la compañía que recibe el envío.
+Raw Consignee Name - Raw Consignee Addr1 - Addr4 & Addr Others: Direcciones sin procesar de la compañía que recibe el envío, distribuidas en varios campos para detalles adicionales.
+Notify Party Name: Compañía que debe ser notificada. Generalmente es el consignatario o el transitario.
+Notify Party Address: Dirección de la compañía que debe ser notificada.
+Raw Notify Party Name - Raw Notify Party Addr1 - Addr4 & Addr Others: Direcciones sin procesar de la compañía que debe ser notificada, distribuidas en varios campos para detalles adicionales.
+Product Desc: Descripción del producto que se envía.
+Marks & Numbers: Información que identifica el envío para que el consignatario pueda reconocer qué es.
+HS Code: Número utilizado por las aduanas para clasificar un producto.
+HS Code Sure Level: Nivel de seguridad de la predicción del código HS. Cuanto mayor es el valor, más segura es la inferencia.
+CIF: Término de comercio internacional (Costo, seguro y flete) utilizado en transacciones de venta y compra donde los bienes son transportados por barco.
+Indicator of true supplier: Indica si los campos del expedidor se refieren a la compañía proveedora o a una compañía de flete.
+Indicator of true buyer: Indica si los campos del consignatario se refieren a la compañía compradora o a una compañía de flete.
+END: Indicador de finalización del envío/fila/transacción.
