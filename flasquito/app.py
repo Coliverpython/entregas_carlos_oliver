@@ -55,12 +55,5 @@ def check_logs():
 
 
 
-
-
-
-
-
-
-
-
-app.run(debug=True)
+if __name__ == "main":
+    app.run(debug=True)
